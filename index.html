@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="5;url=https://roadwatchero.com">
+    <meta http-equiv="refresh" content="7;url=https://roadwatchero.com">
     <title>Welcome to RoadwatchHero</title>
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: whitesmoke;
+            /* Superhero image as full screen background with a dark overlay for contrast */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('1000066628.jpg') no-repeat center center/cover;
+            background-attachment: fixed;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -18,67 +20,71 @@
             min-height: 100vh;
             text-align: center;
         }
-        .landing-card {
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            max-width: 600px;
+        .glass-card {
+            /* Frosted glass effect using whitesmoke base */
+            background: rgba(245, 245, 245, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 50px 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            max-width: 500px;
             width: 90%;
+            animation: fadeIn 1s ease-out;
         }
-        .brand-images {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 30px;
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        .brand-images img {
-            max-width: 200px;
+        .logo-container img {
+            max-width: 220px;
             height: auto;
-            border-radius: 8px;
-        }
-        @media (min-width: 480px) {
-            .brand-images {
-                flex-direction: row;
-                justify-content: center;
-            }
+            margin-bottom: 25px;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
         }
         h1 {
-            font-size: 2rem;
-            color: #333;
-            margin-bottom: 10px;
+            font-size: 2.2rem;
+            color: #1a1a1a;
+            margin: 0 0 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 800;
         }
         p {
-            font-size: 1.1rem;
-            margin-bottom: 35px;
-            color: #666;
+            font-size: 1.15rem;
+            margin-bottom: 40px;
+            color: #444;
+            font-weight: 500;
         }
         .action-button {
             display: inline-block;
             background-color: #ff6600;
             color: #ffffff;
-            padding: 15px 40px;
-            font-size: 1.2rem;
-            font-weight: bold;
+            padding: 16px 45px;
+            font-size: 1.3rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             text-decoration: none;
             border-radius: 50px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 8px 20px rgba(255, 102, 0, 0.4);
+            transition: all 0.3s ease;
         }
         .action-button:hover {
-            background-color: #e65c00;
-            transform: scale(1.05);
+            background-color: #ff771a;
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 12px 25px rgba(255, 102, 0, 0.6);
         }
     </style>
 </head>
 <body>
-    <div class="landing-card">
-        <div class="brand-images">
-            <img src="Rwlogo.jpg" alt="RoadwatchHero Logo">
-            <img src="roadwatchero.jpg" alt="Roadwatch Hero Character">
+    <div class="glass-card">
+        <div class="logo-container">
+            <img src="1000066247.jpg" alt="RoadwatchHero Logo">
         </div>
         <h1>Welcome to RoadwatchHero</h1>
-        <p>You are being redirected to our official site.</p>
+        <p>You are being redirected to our official site...</p>
         <a href="https://roadwatchero.com" class="action-button">Check it out!</a>
     </div>
 </body>
